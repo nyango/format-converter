@@ -16,7 +16,7 @@ lazy val root = (project in file(".")).
       "net.jcazevedo" %% "moultingyaml" % "0.4.0"
     ) ++ (
       CrossVersion.partialVersion(scalaVersion.value) match {
-        case Some((2, scalaMajor)) if scalaMajor >= 2.12 =>
+        case Some((2, scalaMajor)) if scalaMajor >= 12 =>
           Seq("com.typesafe.play" %% "play-json" % "2.6.0-M6")
         case _ =>
           Seq("com.typesafe.play" %% "play-json" % "2.5.13")
