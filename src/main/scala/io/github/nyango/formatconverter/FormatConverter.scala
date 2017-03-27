@@ -1,4 +1,4 @@
-package net.nyango.formatconverter
+package io.github.nyango.formatconverter
 
 import net.jcazevedo.moultingyaml._
 import play.api.libs.json._

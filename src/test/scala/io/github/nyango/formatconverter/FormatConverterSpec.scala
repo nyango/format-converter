@@ -1,7 +1,7 @@
-package net.nyango.formatconverter
+package io.github.nyango.formatconverter
 
-import org.scalatest.FlatSpec
 import net.jcazevedo.moultingyaml._
+import org.scalatest.FlatSpec
 import play.api.libs.json.JsObject
 
 class FormatConverterSpec extends FlatSpec {
