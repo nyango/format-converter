@@ -2,7 +2,7 @@ val Scala211 = "2.11.8"
 
 lazy val root = (project in file(".")).
   settings(
-    name := "format-converter",
+    name := "formatConverter",
     scalaVersion := Scala211,
     crossScalaVersions := "2.12.1" :: Scala211 :: "2.10.6" :: Nil,
     scalacOptions ++= Seq(
