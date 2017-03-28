@@ -8,8 +8,17 @@ object FormatConverter {
     yamlValueToJsValue(yamlStr.parseYaml)
   }
 
-  def jsValueToYamlStr(json: JsValue): String = {
-    jsValueToYamlValue(json).prettyPrint
+  def jsValueToYamlStr(
+      json: JsValue,
+      flowStyle: FlowStyle = FlowStyle.DEFAULT,
+      scalarStyle: ScalarStyle = ScalarStyle.DEFAULT,
+      lineBreak: LineBreak = LineBreak.DEFAULT
+  ): String = {
+    jsValueToYamlValue(json).print(
+      flowStyle = flowStyle,
+      scalarStyle = scalarStyle,
+      lineBreak = lineBreak
+    )
   }
 
   def jsValueToYamlValue(json: JsValue): YamlValue = json match {
@@ -40,7 +49,7 @@ object FormatConverter {
       JsString(s.value)
     case b: YamlBoolean =>
       JsBoolean(b.boolean)
-    case d: YamlDate => // There is not any "JsDate" in play-json
+    case d: YamlDate    => // There is not any "JsDate" in play-json
       JsString(d.prettyPrint)
     case _              => JsNull
   }
