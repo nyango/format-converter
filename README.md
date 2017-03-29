@@ -1,4 +1,4 @@
-# FormatConverter(Yaml to Json, Json to Yaml)
+# FormatConverter(Yaml to Json, Json to Yaml) [![Build Status](https://travis-ci.org/nyango/format-converter.svg?branch=master)](https://travis-ci.org/nyango/format-converter)
 
 Scala wrapper for [MoultingYAML](https://github.com/jcazevedo/moultingyaml) and [Play JSON](https://github.com/playframework/play-json),
 in order to convert from yaml to json, and vice versa.
