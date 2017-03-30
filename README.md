@@ -10,5 +10,5 @@ When you use it in Scala, add some words as below.
 ```build.sbt
 lazy val yourProject = Project(...
 
-  ).dependsOn(ProjectRef(uri("git://github.com/nyango/format-converter.git#v0.1.0"), "root"))
+  ).dependsOn(ProjectRef(uri("git://github.com/nyango/format-converter.git#v0.1.1"), "root"))
 ```
